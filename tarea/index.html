@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Mani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="icono.css">
+    <link rel="stylesheet" href="caja.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="LOGO.png" alt="">
+        </div>
+        <nav id="boton"><a href="#" onclick="aparecer()"><span class="icon-list"></span></a></nav>
+        <nav id="botonera_posicion">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#nutrientes">Nutrientes</a></li>
+                <li><a href="#ventas">Ventas</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h2>Venta de Mani Villa Mercedes</h2>
+        <p>Venta y ditribucion de mani con y sin cascara en toda la localidad de Villa Mercedes (S.L.)</p>
+        <img src="mani1.png" alt="">
+    </section>
+    <section id="nosotros">
+        <div id="zona">
+            <h2>Localizacion</h2>
+            <h3><span>Provincia:</span> San Luis</h3>
+            <h3><span>Localidad:</span> Capital</h3>
+            <h3><span>Direccion:</span> Av Ejercito de los Andes 950</h3>
+            <img src="argentina.png" alt="">
+        </div>
+        <div id="descripcion_zona">
+            <h2>Quienes Somos</h2>
+            <p>Somos JLC, emprendimiento de mani. Nos dedicamos a la cultivacion y coccion de semillas de mani y distribuidos en toda la region de la localidad. Nuestro emprendimiento tiene como vision y mision entregar la mejor calidad de nuestro producto para el publico, logrando generar una cultura trabajo y disciplina que logre impulsar el desarrollo local. </p>
+        </div>
+    </section>
+    <section id="nutrientes">
+      <h2>Seccion de calorias Recomendadas</h2>
+
+      <div id="FormularioCalorias">
+        <form>
+          <div class="mb-3">
+            <label for="nombreFormulario" class="form-label">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="nombreFormulario" aria-describedby="nombreHelp" placeholder="Jorge Cruz">
+            <div id="nombreHelp" class="form-text">Coloque su nombre completo por favor.</div>
+          </div>
+          <div class="mb-3">
+            <label for="sexoFormulario" class="form-label">Sexo</label>
+            <input type="text" class="form-control" id="sexoFormulario" aria-describedby="sexoHelp" placeholder="hombre">
+            <div id="sexoHelp" class="form-text">Coloque hombre o mujer (No aceptamos no binarie).</div>
+          </div>
+          <div class="mb-3">
+            <label for="edadFormulario" class="form-label">Edad</label>
+            <input type="text" class="form-control" id="edadFormulario" aria-describedby="edadHelp" placeholder="18">
+            <div id="edadHelp" class="form-text">Coloque su edad en numero.</div>
+          </div>
+          <div class="mb-3">
+            <label for="pesoFormulario" class="form-label">Peso</label>
+            <input type="text" class="form-control" id="pesoFormulario" aria-describedby="pesoHelp" placeholder="80">
+            <div id="pesoHelp" class="form-text">Coloque su peso en kg.</div>
+          </div>
+          <div class="mb-3">
+            <label for="alturaFormulario" class="form-label">Altura</label>
+            <input type="text" class="form-control" id="alturaFormulario" aria-describedby="alturaHelp" placeholder="180">
+            <div id="alturaHelp" class="form-text">Coloque su tamaño en cm.</div>
+          </div>
+        </form>
+        <button type="submit" class="btn btn-info" onclick="nutrientes()">Cargar</button>
+      </div>
+
+      <div id="formCompleto">
+        <h3>Calorias recomendada para <span id="wNombre"></span></h3>
+        <h3>Cantidad diaria: <span id="wCalorias"></span> cal</h3>
+        <p>Cada 100grs de Mani se obtiene aproximadamente 567 calorias. Se sugiere una cantidad de 30grs diarios para mantener una dieta balanceada</p>
+        <h2>Datos de <span id="wNombre2"></span></h2>
+        <h3 class ="nutrientes_datos">Edad: <span id="wEdad"></span> años </h3>
+        <h3 class ="nutrientes_datos">Peso: <span id="wPeso"></span> kg</h3>
+        <h3 class ="nutrientes_datos" id="hola">Altura: <span id="wAltura"></span> cm</h3>
+        <button type="submit" class="btn btn-success" id='volverFormulario' onclick="formulario()">Volver</button>
+      </div>
+      
+    </section>
+    <section id="ventas">
+      <!-- Carousel bootstrap -->
+      <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active contenido-carousel">
+            <img src="cascara.jpg" class="d-block w-100" alt="mani con cascara">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mani con cascara</h5>
+              <p>Mani con cascara en bolsa de 1kg, 2kg y 5kg a $150 el kg.</p>
+            </div>
+          </div>
+          <div class="carousel-item contenido-carousel">
+            <img src="pelado.jpg" class="d-block w-100" alt="mani pelado">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mani Pelado</h5>
+              <p>Mani sin cascara en bolsa de 1kg, 2kg y 5kg a $200 el kg.</p>
+            </div>
+          </div>
+          <div class="carousel-item contenido-carousel">
+            <img src="saborizado.jpg" class="d-block w-100" alt="mani saborizado">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mani Saborizado</h5>
+              <p>Mani saborizado en bolsa de 1kg, 2kg y 5kg a $185 el kg.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- -------------------- -->
+    </section>
+    <section id="contactos">
+      <!-- Caja de bootstrap -->
+      <div class="container-fluid">
+        <div class="row" id="producto_venta">
+          <div class="col btn-primary contacto1">
+            <h2>Localizacion en Google Map</h2>
+            <div class="ubicacion">
+              <a href="https://www.google.com.ar/maps/place/Universidad+Nacional+de+San+Luis/@-33.2918219,-66.3411685,16z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzPCsDE3JzI4LjEiUyA2NsKwMTgnMTEuNCJX!3b1!8m2!3d-33.2911249!4d-66.3031736!3m4!1s0x95d4394eec782487:0x2bcfdfba83514ad4!8m2!3d-33.2921332!4d-66.3396195?hl=es">
+                <img src="localizacion.png" alt="ubicacion">
+              </a>
+            </div>
+          </div>
+          <div class="col btn-warning datos">
+            <h2>Contactos</h2>
+            <h3><span>Dia de Atencion:</span>Lunes a Sabado</h3>
+            <h3><span>Horario de Atencion:</span> 8hs a 19hs</h3>
+            <h3><span>Numero de Telefono:</span>266-859674</h3>
+            <h3 id="anuncio">Envio a Todo el Pais a precio por menor y mayor</h3>
+          </div>
+        </div>
+      </div>
+      <!-- ---- -->
+    </section>
+    <footer>
+        <nav id="botonera_redes">
+          <div class="container-fluid contenidos_redes">
+            <div class="row">
+              <div class="col col-8 mensaje">
+                <h2>Esperamos su Llamada. Gracias!!!</h2>
+              </div>
+              <div class="col col-2 redes">
+                <a href="https://www.instagram.com/elearning.total/">
+                  <img src="iconos/001-instagram.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/elearningtotal">
+                  <img src="iconos/002-facebook.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div id="desarrollador_web">
+          <h2><span>Desarrollador Web:</span> Cruz, Jorge Luis</h2>
+          <h3><span>Email:</span>jorgeluiscruz0789@gmail.com</h3>
+          <h3><span>Contacto:</span>2657-604607</h3>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
